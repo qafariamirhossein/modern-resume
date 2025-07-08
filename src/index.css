@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -27,9 +28,64 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   min-height: 100vh;
+  scroll-behavior: smooth;
+  transition: background 0.5s;
+}
+
+html.dark body {
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #a1c4fd;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #414345;
+}
+
+.animated-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.animated-bg-gradient {
+  position: absolute;
+  width: 60vw; height: 60vw;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: moveBg 12s ease-in-out infinite alternate;
+}
+
+.animated-bg-gradient.one {
+  background: #a1c4fd;
+  left: -10vw; top: -10vw;
+}
+.animated-bg-gradient.two {
+  background: #c2e9fb;
+  right: -10vw; bottom: -10vw;
+  animation-delay: 3s;
+}
+.animated-bg-gradient.three {
+  background: #fbc2eb;
+  left: 40vw; top: 60vh;
+  animation-delay: 6s;
+}
+
+@keyframes moveBg {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-40px) scale(1.1); }
 }
 
 h1 {
