@@ -20,6 +20,12 @@ const resources = {
           title: 'Second Project',
           short: 'Another short description.',
           long: 'A comprehensive overview of the second project, highlighting its unique aspects, technologies, and outcomes.'
+        },
+        twitterData: {
+          title: 'Twitter Data Collection & Analysis Platform',
+          short: 'AI-powered platform for real-time Twitter data collection, analysis, and visualization.',
+          long: `A robust full-stack application for collecting, analyzing, and visualizing Twitter data in real time. Supports flexible tweet collection via both the official Twitter API and a custom-built scraper, enabling comprehensive data gathering across various contexts. Features include:
+\n\n- Multiple tweet fetching methods (List ID, Search Terms, Tweet ID, Username)\n- Automatic tweet translation\n- Live tweet screenshot generation\n- Clean, interactive dashboard for monitoring data flow and AI-driven analysis\n\nRole: Fullstack Developer – Designed and built the entire system from scratch, including backend infrastructure, scraper logic, and frontend UI/UX.\n\nStack: Next.js · TypeScript · Puppeteer · PostgreSQL\n\nLive Demo: https://aivibe.site/project/talk-for-peace/reports\n\nChallenges Solved:\n- Developed a resilient, anti-ban tweet scraper\n- Engineered a robust tweet screenshot and translation module\n- Ensured seamless integration between backend and frontend for real-time updates\n\nDuration: Jan – March 2025`
         }
       },
       contact: 'Contact Me',
@@ -117,6 +123,12 @@ const resources = {
           title: 'پروژه دوم',
           short: 'توضیح کوتاه دیگر.',
           long: 'مروری جامع بر پروژه دوم با تاکید بر جنبه‌های منحصربه‌فرد، فناوری‌ها و دستاوردها.'
+        },
+        twitterData: {
+          title: 'پلتفرم جمع‌آوری و تحلیل داده‌های توییتر',
+          short: 'پلتفرم هوشمند برای جمع‌آوری، تحلیل و نمایش داده‌های توییتر به صورت لحظه‌ای.',
+          long: `یک اپلیکیشن فول‌استک قدرتمند برای جمع‌آوری، تحلیل و نمایش داده‌های توییتر به صورت لحظه‌ای. امکان جمع‌آوری داده‌ها از طریق API رسمی توییتر و اسکریپر اختصاصی، با قابلیت‌های:
+\n\n- روش‌های مختلف جمع‌آوری توییت (لیست، جستجو، شناسه، نام کاربری)\n- ترجمه خودکار توییت‌ها\n- تولید اسکرین‌شات زنده از توییت‌ها\n- داشبورد تعاملی و تمیز برای پایش داده و تحلیل مبتنی بر هوش مصنوعی\n\nنقش: توسعه‌دهنده فول‌استک – طراحی و پیاده‌سازی کامل زیرساخت بک‌اند، منطق اسکریپر و رابط کاربری فرانت‌اند\n\nتکنولوژی‌ها: Next.js · TypeScript · Puppeteer · PostgreSQL\n\nدموی زنده: https://aivibe.site/project/talk-for-peace/reports\n\nچالش‌های حل‌شده:\n- توسعه اسکریپر مقاوم در برابر بن\n- ماژول اسکرین‌شات و ترجمه توییت\n- یکپارچه‌سازی بی‌نقص بک‌اند و فرانت‌اند برای به‌روزرسانی لحظه‌ای\n\nمدت زمان: ژانویه تا مارس ۲۰۲۵`
         }
       },
       contact: 'تماس با من',

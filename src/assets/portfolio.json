@@ -20,5 +20,21 @@
     "tech": ["Vue", "Vuetify", "Firebase"],
     "demo": "https://demo.com/project2",
     "source": "https://github.com/yourrepo/project2"
+  },
+  {
+    "id": "twitter-data",
+    "titleKey": "portfolio.twitterData.title",
+    "shortDescKey": "portfolio.twitterData.short",
+    "longDescKey": "portfolio.twitterData.long",
+    "images": [
+      "/images/portfolio/twitter-data-1.png",
+      "/images/portfolio/twitter-data-2.png",
+      "/images/portfolio/twitter-data-3.png",
+      "/images/portfolio/twitter-data-4.png"
+    ],
+    "video": "",
+    "tech": ["Next.js", "TypeScript", "Puppeteer", "PostgreSQL"],
+    "demo": "https://aivibe.site/project/talk-for-peace/reports",
+    "source": ""
   }
 ] 
