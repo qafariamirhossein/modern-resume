@@ -66,12 +66,12 @@ function App() {
                 <Section id="portfolio" title={t('portfolio.label')} icon={<FaProjectDiagram />}>
                   <Portfolio />
                 </Section>
-                <Section id="testimonials" title={t('testimonials_section')} icon={<FaQuoteRight />}>
+                {/* <Section id="testimonials" title={t('testimonials_section')} icon={<FaQuoteRight />}>
                   <Testimonials />
-                </Section>
-                <Section id="awards" title={t('awards_section')} icon={<FaAward />}>
+                </Section> */}
+                {/* <Section id="awards" title={t('awards_section')} icon={<FaAward />}>
                   <Awards />
-                </Section>
+                </Section> */}
                 <Section id="hobbies" title={t('hobbies_section')} icon={<FaHeart />}>
                   <Hobbies />
                 </Section>
