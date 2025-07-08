@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import './App.css'
 import Section from './assets/Section';
-import { FaGithub, FaLinkedin, FaTwitter, FaUser, FaCode, FaGraduationCap, FaProjectDiagram, FaQuoteRight, FaAward, FaHeart, FaStream, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaCode, FaGraduationCap, FaProjectDiagram, FaHeart, FaStream, FaEnvelope } from 'react-icons/fa';
 import AboutMe from './assets/AboutMe';
 import Skills from './assets/Skills';
 import Education from './assets/Education';
 import Portfolio from './assets/Portfolio';
 import ContactMe from './assets/ContactMe';
-import Testimonials from './assets/Testimonials';
-import Awards from './assets/Awards';
+// import Testimonials from './assets/Testimonials';
+// import Awards from './assets/Awards';
 import Hobbies from './assets/Hobbies';
 import Timeline from './assets/Timeline';
 import Header from './assets/Header';
