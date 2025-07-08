@@ -12,75 +12,7 @@ import Testimonials from './assets/Testimonials';
 import Awards from './assets/Awards';
 import Hobbies from './assets/Hobbies';
 import Timeline from './assets/Timeline';
-
-function ThemeSwitcher() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem('theme') || 'light'
-  );
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
-  };
-  return (
-    <button onClick={toggleTheme} className="ml-2 px-2 py-1 rounded bg-gray-200 dark:bg-gray-700">
-      {theme === 'light' ? '🌞' : '🌙'}
-    </button>
-  );
-}
-
-function LangSwitcher() {
-  const { i18n } = useTranslation();
-  const toggleLang = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'fa' : 'en');
-    document.documentElement.dir = i18n.language === 'fa' ? 'rtl' : 'ltr';
-  };
-  return (
-    <button onClick={toggleLang} className="ml-2 px-2 py-1 rounded bg-gray-200 dark:bg-gray-700">
-      {i18n.language === 'en' ? 'FA' : 'EN'}
-    </button>
-  );
-}
-
-function Nav() {
-  const { t } = useTranslation();
-  const navItems = [
-    { id: 'about', label: t('about') },
-    { id: 'skills', label: t('skills') },
-    { id: 'education', label: t('education') },
-    { id: 'portfolio', label: t('portfolio') },
-    { id: 'testimonials', label: t('testimonials_section') },
-    { id: 'awards', label: t('awards_section') },
-    { id: 'hobbies', label: t('hobbies_section') },
-    { id: 'timeline', label: t('timeline_section') },
-    { id: 'contact', label: t('contact') },
-  ];
-  return (
-    <nav className="flex gap-4">
-      {navItems.map(item => (
-        <a
-          key={item.id}
-          href={`#${item.id}`}
-          className="hover:text-blue-500 transition-colors duration-200"
-        >
-          {item.label}
-        </a>
-      ))}
-    </nav>
-  );
-}
-
-// function ProgressBar({ value }: { value: number }) {
-//   return (
-//     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-2">
-//       <div
-//         className="bg-blue-500 h-2 rounded-full transition-all duration-700"
-//         style={{ width: `${value}%` }}
-//       ></div>
-//     </div>
-//   );
-// }
+import Header from './assets/Header';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -113,39 +45,7 @@ function App() {
         <div className="animated-bg-gradient two"></div>
         <div className="animated-bg-gradient three"></div>
       </div>
-      <header className="flex flex-col md:flex-row justify-between items-center py-6 px-4 shadow-md bg-white/70 dark:bg-gray-800/70 sticky top-0 z-20 backdrop-blur-md rounded-b-2xl">
-        <div className="flex items-center gap-4">
-          <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-fade-in">{t('welcome')}</h1>
-          <Nav />
-        </div>
-        <div className="flex items-center mt-4 md:mt-0">
-          <LangSwitcher />
-          <ThemeSwitcher />
-        </div>
-      </header>
-      {/* Floating Switchers */}
-      <div className="fixed top-6 right-6 z-30 flex flex-col gap-2">
-        <LangSwitcher />
-        <ThemeSwitcher />
-      </div>
-      {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center py-16 animate-fade-in relative z-10">
-        <div className="relative mb-4">
-          <img
-            src="https://placehold.co/120x120"
-            alt="avatar"
-            className="rounded-full border-4 border-blue-400 shadow-xl w-32 h-32 object-cover animate-float"
-          />
-          <span className="absolute -bottom-2 -right-2 bg-gradient-to-tr from-blue-400 to-purple-400 text-white px-2 py-1 rounded-full text-xs shadow-lg animate-pulse">{t('title')}</span>
-        </div>
-        <div className="text-3xl font-extrabold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient-text">{t('name')}</div>
-        <div className="text-lg text-blue-600 dark:text-blue-400 font-semibold mt-1 animate-fade-in">{t('location')}</div>
-        <div className="flex gap-4 text-2xl mt-4 animate-fade-in">
-          <a href="#" className="hover:scale-125 hover:text-blue-500 transition-transform"><FaGithub /></a>
-          <a href="#" className="hover:scale-125 hover:text-blue-500 transition-transform"><FaLinkedin /></a>
-          <a href="#" className="hover:scale-125 hover:text-blue-500 transition-transform"><FaTwitter /></a>
-        </div>
-      </section>
+      <Header />
       <main className="w-full max-w-6xl mx-auto px-2 sm:px-4 md:px-8 relative z-10">
         <Section id="about" title={t('about')} icon={<FaUser />}>
           <AboutMe />
