@@ -5,11 +5,23 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   en: {
     translation: {
-      welcome: 'Welcome',
+      welcome: 'Amir ;)',
       about: 'About Me',
       skills: 'Skills',
       education: 'Education',
-      portfolio: 'Portfolio',
+      portfolio: {
+        label: 'Portfolio',
+        project1: {
+          title: 'Awesome Project',
+          short: 'A short description.',
+          long: 'A long, detailed description of the project, its features, challenges, and results. Includes everything a visitor might want to know.'
+        },
+        project2: {
+          title: 'Second Project',
+          short: 'Another short description.',
+          long: 'A comprehensive overview of the second project, highlighting its unique aspects, technologies, and outcomes.'
+        }
+      },
       contact: 'Contact Me',
       name: 'John Doe',
       title: 'Full Stack Developer',
@@ -24,10 +36,6 @@ const resources = {
         { name: 'TypeScript', level: 80 },
         { name: 'Node.js', level: 75 },
         { name: 'CSS', level: 70 },
-      ],
-      portfolio_items: [
-        { title: 'Project Alpha', description: 'A modern web app for productivity.', link: '#', image: 'https://placehold.co/300x200' },
-        { title: 'Beta Blog', description: 'A stylish blog platform.', link: '#', image: 'https://placehold.co/300x200' },
       ],
       contact_email: 'john.doe@example.com',
       contact_message: 'Feel free to reach out for collaboration or just to say hi!',
@@ -75,15 +83,30 @@ const resources = {
         { year: '2019', event: 'Graduated and joined WebDev Inc.' },
         { year: '2022', event: 'Promoted to Senior Developer' },
       ],
+      tech_used: 'Tech used',
+      live_demo: 'Live Demo',
+      source_code: 'Source Code',
     },
   },
   fa: {
     translation: {
-      welcome: 'خوش آمدید',
+      welcome: 'امیر ;)',
       about: 'درباره من',
       skills: 'مهارت‌ها',
       education: 'تحصیلات',
-      portfolio: 'نمونه کارها',
+      portfolio: {
+        label: 'نمونه کارها',
+        project1: {
+          title: 'پروژه عالی',
+          short: 'توضیح کوتاه.',
+          long: 'توضیح کامل و مفصل درباره پروژه، ویژگی‌ها، چالش‌ها و نتایج آن. شامل هر آنچه بازدیدکننده باید بداند.'
+        },
+        project2: {
+          title: 'پروژه دوم',
+          short: 'توضیح کوتاه دیگر.',
+          long: 'مروری جامع بر پروژه دوم با تاکید بر جنبه‌های منحصربه‌فرد، فناوری‌ها و دستاوردها.'
+        }
+      },
       contact: 'تماس با من',
       name: 'جان دو',
       title: 'توسعه‌دهنده فول‌استک',
@@ -98,10 +121,6 @@ const resources = {
         { name: 'تایپ‌اسکریپت', level: 80 },
         { name: 'Node.js', level: 75 },
         { name: 'CSS', level: 70 },
-      ],
-      portfolio_items: [
-        { title: 'پروژه آلفا', description: 'یک وب‌اپ مدرن برای بهره‌وری.', link: '#', image: 'https://placehold.co/300x200' },
-        { title: 'بتا بلاگ', description: 'یک پلتفرم وبلاگ شیک.', link: '#', image: 'https://placehold.co/300x200' },
       ],
       contact_email: 'john.doe@example.com',
       contact_message: 'برای همکاری یا حتی یک سلام ساده، خوشحال می‌شوم با من تماس بگیرید!',
@@ -149,6 +168,9 @@ const resources = {
         { year: '۲۰۱۹', event: 'فارغ‌التحصیلی و پیوستن به وب‌دِو اینک.' },
         { year: '۲۰۲۲', event: 'ارتقا به توسعه‌دهنده ارشد' },
       ],
+      tech_used: 'فناوری‌های استفاده‌شده',
+      live_demo: 'دموی زنده',
+      source_code: 'سورس کد',
     },
   },
 };
