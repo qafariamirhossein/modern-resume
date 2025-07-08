@@ -1,6 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { FaTelegram, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa';
-import React from 'react';
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -10,7 +8,7 @@ const AboutMe = () => {
         <img
           src="/images/me.png"
           alt="Profile"
-          className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-gray-300 dark:border-gray-600 shadow-lg"
+          className="w-56 h-56 rounded-full object-cover mb-4 border-4 border-gray-300 dark:border-gray-600 shadow-lg"
         />
         <div>{t('about_text')}</div>
       </div>
