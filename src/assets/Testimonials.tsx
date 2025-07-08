@@ -1,22 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-const testimonials = [
-  {
-    name: 'Alice Smith',
-    role: 'Product Manager',
-    text: 'Working with John was a fantastic experience. He delivers high quality code and is a great team player.',
-    avatar: 'https://placehold.co/64x64',
-  },
-  {
-    name: 'Bob Lee',
-    role: 'CTO',
-    text: 'John is a creative problem solver and always brings fresh ideas to the table.',
-    avatar: 'https://placehold.co/64x64',
-  },
-];
-
 const Testimonials = () => {
   const { t } = useTranslation();
+  const testimonials = t('testimonials', { returnObjects: true }) as { name: string; role: string; text: string; avatar: string }[];
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
       {testimonials.map((item, idx) => (

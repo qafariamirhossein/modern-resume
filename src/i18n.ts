@@ -32,6 +32,49 @@ const resources = {
       contact_email: 'john.doe@example.com',
       contact_message: 'Feel free to reach out for collaboration or just to say hi!',
       // Add more keys as needed
+      testimonials_section: 'Testimonials',
+      awards_section: 'Awards',
+      hobbies_section: 'Hobbies',
+      timeline_section: 'Timeline',
+      testimonials: [
+        {
+          name: 'Alice Smith',
+          role: 'Product Manager',
+          text: 'Working with John was a fantastic experience. He delivers high quality code and is a great team player.',
+          avatar: 'https://placehold.co/64x64',
+        },
+        {
+          name: 'Bob Lee',
+          role: 'CTO',
+          text: 'John is a creative problem solver and always brings fresh ideas to the table.',
+          avatar: 'https://placehold.co/64x64',
+        },
+      ],
+      awards: [
+        {
+          title: 'Best Developer 2022',
+          issuer: 'Tech Awards',
+          date: '2022',
+          description: 'Awarded for outstanding performance and innovation in web development.',
+        },
+        {
+          title: 'Open Source Hero',
+          issuer: 'Open Source Org',
+          date: '2021',
+          description: 'Recognized for significant contributions to open source projects.',
+        },
+      ],
+      hobbies: [
+        { name: 'Photography', icon: '📷', description: 'Capturing moments and landscapes.' },
+        { name: 'Traveling', icon: '✈️', description: 'Exploring new places and cultures.' },
+        { name: 'Music', icon: '🎵', description: 'Listening and composing music.' },
+      ],
+      timeline: [
+        { year: '2015', event: 'Started university' },
+        { year: '2017', event: 'Internship at TechCorp' },
+        { year: '2019', event: 'Graduated and joined WebDev Inc.' },
+        { year: '2022', event: 'Promoted to Senior Developer' },
+      ],
     },
   },
   fa: {
@@ -63,6 +106,49 @@ const resources = {
       contact_email: 'john.doe@example.com',
       contact_message: 'برای همکاری یا حتی یک سلام ساده، خوشحال می‌شوم با من تماس بگیرید!',
       // Add more keys as needed
+      testimonials_section: 'توصیه‌نامه‌ها',
+      awards_section: 'جوایز',
+      hobbies_section: 'سرگرمی‌ها',
+      timeline_section: 'تایم‌لاین',
+      testimonials: [
+        {
+          name: 'آلیس اسمیت',
+          role: 'مدیر محصول',
+          text: 'کار با جان تجربه فوق‌العاده‌ای بود. او کد با کیفیت بالا ارائه می‌دهد و یک عضو عالی تیم است.',
+          avatar: 'https://placehold.co/64x64',
+        },
+        {
+          name: 'باب لی',
+          role: 'مدیر فنی',
+          text: 'جان یک حل‌کننده خلاق مشکلات است و همیشه ایده‌های تازه‌ای ارائه می‌دهد.',
+          avatar: 'https://placehold.co/64x64',
+        },
+      ],
+      awards: [
+        {
+          title: 'بهترین توسعه‌دهنده ۲۰۲۲',
+          issuer: 'جوایز فناوری',
+          date: '۲۰۲۲',
+          description: 'به خاطر عملکرد برجسته و نوآوری در توسعه وب اهدا شده است.',
+        },
+        {
+          title: 'قهرمان متن‌باز',
+          issuer: 'سازمان متن‌باز',
+          date: '۲۰۲۱',
+          description: 'برای مشارکت‌های قابل توجه در پروژه‌های متن‌باز شناخته شده است.',
+        },
+      ],
+      hobbies: [
+        { name: 'عکاسی', icon: '📷', description: 'ثبت لحظات و مناظر.' },
+        { name: 'سفر', icon: '✈️', description: 'کشف مکان‌ها و فرهنگ‌های جدید.' },
+        { name: 'موسیقی', icon: '🎵', description: 'گوش دادن و ساخت موسیقی.' },
+      ],
+      timeline: [
+        { year: '۲۰۱۵', event: 'شروع دانشگاه' },
+        { year: '۲۰۱۷', event: 'کارآموزی در تک‌کورپ' },
+        { year: '۲۰۱۹', event: 'فارغ‌التحصیلی و پیوستن به وب‌دِو اینک.' },
+        { year: '۲۰۲۲', event: 'ارتقا به توسعه‌دهنده ارشد' },
+      ],
     },
   },
 };

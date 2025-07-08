@@ -1,13 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-const hobbies = [
-  { name: 'Photography', icon: '📷', description: 'Capturing moments and landscapes.' },
-  { name: 'Traveling', icon: '✈️', description: 'Exploring new places and cultures.' },
-  { name: 'Music', icon: '🎵', description: 'Listening and composing music.' },
-];
-
 const Hobbies = () => {
   const { t } = useTranslation();
+  const hobbies = t('hobbies', { returnObjects: true }) as { name: string; icon: string; description: string }[];
   return (
     <div className="flex flex-wrap gap-6 justify-center">
       {hobbies.map((item, idx) => (

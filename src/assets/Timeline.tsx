@@ -1,14 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-const timeline = [
-  { year: '2015', event: 'Started university' },
-  { year: '2017', event: 'Internship at TechCorp' },
-  { year: '2019', event: 'Graduated and joined WebDev Inc.' },
-  { year: '2022', event: 'Promoted to Senior Developer' },
-];
-
 const Timeline = () => {
   const { t } = useTranslation();
+  const timeline = t('timeline', { returnObjects: true }) as { year: string; event: string }[];
   return (
     <div className="relative border-l-2 border-blue-400 dark:border-blue-700 pl-6">
       {timeline.map((item, idx) => (

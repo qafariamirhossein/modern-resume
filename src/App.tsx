@@ -50,10 +50,10 @@ function Nav() {
     { id: 'skills', label: t('skills') },
     { id: 'education', label: t('education') },
     { id: 'portfolio', label: t('portfolio') },
-    { id: 'testimonials', label: 'Testimonials' },
-    { id: 'awards', label: 'Awards' },
-    { id: 'hobbies', label: 'Hobbies' },
-    { id: 'timeline', label: 'Timeline' },
+    { id: 'testimonials', label: t('testimonials_section') },
+    { id: 'awards', label: t('awards_section') },
+    { id: 'hobbies', label: t('hobbies_section') },
+    { id: 'timeline', label: t('timeline_section') },
     { id: 'contact', label: t('contact') },
   ];
   return (
@@ -71,23 +71,42 @@ function Nav() {
   );
 }
 
-function ProgressBar({ value }: { value: number }) {
-  return (
-    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-2">
-      <div
-        className="bg-blue-500 h-2 rounded-full transition-all duration-700"
-        style={{ width: `${value}%` }}
-      ></div>
-    </div>
-  );
-}
+// function ProgressBar({ value }: { value: number }) {
+//   return (
+//     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-2">
+//       <div
+//         className="bg-blue-500 h-2 rounded-full transition-all duration-700"
+//         style={{ width: `${value}%` }}
+//       ></div>
+//     </div>
+//   );
+// }
 
 function App() {
   const { t, i18n } = useTranslation();
   document.documentElement.dir = i18n.language === 'fa' ? 'rtl' : 'ltr';
 
+  // Scroll progress bar logic
+  const [scroll, setScroll] = useState(0);
+  // Add scroll event listener
+  useState(() => {
+    const onScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setScroll(scrolled);
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  });
+
   return (
     <div className="min-h-screen relative text-gray-900 dark:text-gray-100 transition-colors">
+      {/* Scroll Progress Bar */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', zIndex: 50 }}>
+        <div style={{ height: 6, background: 'linear-gradient(90deg, #4f8cff, #a259ff, #f857a6)', width: `${scroll}%`, borderRadius: 4, transition: 'width 0.2s' }} />
+        <div style={{ position: 'absolute', right: 16, top: 0, color: '#333', fontWeight: 700, fontSize: 12, background: 'rgba(255,255,255,0.7)', borderRadius: 4, padding: '0 8px', height: 18, display: 'flex', alignItems: 'center' }}>{Math.round(scroll)}%</div>
+      </div>
       {/* Animated Background */}
       <div className="animated-bg">
         <div className="animated-bg-gradient one"></div>
@@ -140,16 +159,16 @@ function App() {
         <Section id="portfolio" title={t('portfolio')} icon={<FaProjectDiagram />}>
           <Portfolio />
         </Section>
-        <Section id="testimonials" title="Testimonials" icon={<FaQuoteRight />}>
+        <Section id="testimonials" title={t('testimonials_section')} icon={<FaQuoteRight />}>
           <Testimonials />
         </Section>
-        <Section id="awards" title="Awards" icon={<FaAward />}>
+        <Section id="awards" title={t('awards_section')} icon={<FaAward />}>
           <Awards />
         </Section>
-        <Section id="hobbies" title="Hobbies" icon={<FaHeart />}>
+        <Section id="hobbies" title={t('hobbies_section')} icon={<FaHeart />}>
           <Hobbies />
         </Section>
-        <Section id="timeline" title="Timeline" icon={<FaStream />}>
+        <Section id="timeline" title={t('timeline_section')} icon={<FaStream />}>
           <Timeline />
         </Section>
         <Section id="contact" title={t('contact')} icon={<FaEnvelope />}>

@@ -1,22 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-const awards = [
-  {
-    title: 'Best Developer 2022',
-    issuer: 'Tech Awards',
-    date: '2022',
-    description: 'Awarded for outstanding performance and innovation in web development.',
-  },
-  {
-    title: 'Open Source Hero',
-    issuer: 'Open Source Org',
-    date: '2021',
-    description: 'Recognized for significant contributions to open source projects.',
-  },
-];
-
 const Awards = () => {
   const { t } = useTranslation();
+  const awards = t('awards', { returnObjects: true }) as { title: string; issuer: string; date: string; description: string }[];
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
       {awards.map((item, idx) => (
