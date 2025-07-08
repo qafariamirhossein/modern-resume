@@ -36,5 +36,25 @@
     "tech": ["Next.js", "TypeScript", "Puppeteer", "PostgreSQL"],
     "demo": "https://aivibe.site/project/talk-for-peace/reports",
     "source": ""
+  },
+  {
+    "id": "ai-nft-generator",
+    "titleKey": "portfolio.aiNftGenerator.title",
+    "shortDescKey": "portfolio.aiNftGenerator.short",
+    "longDescKey": "portfolio.aiNftGenerator.long",
+    "images": [
+      "/images/portfolio/home-dark-1.png",
+      "/images/portfolio/home-dark-2.png",
+      "/images/portfolio/home-dark-3.png",
+      "/images/portfolio/home-light-1.png",
+      "/images/portfolio/home-light-2.png",
+      "/images/portfolio/home-light-3.png"
+    ],
+    "video": "",
+    "tech": [
+      "Next.js", "TypeScript", "Tailwind CSS", "Ethereum", "OpenAI", "Pinata", "Alchemy", "RainbowKit"
+    ],
+    "demo": "https://ai-nft-generator.com/",
+    "source": "https://github.com/qafariamirhossein/ai-nft-generator"
   }
 ] 
