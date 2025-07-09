@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const SEGMENTS = 120;
-const SPEED = 9; // سرعت حرکت مار (پیکسل در هر فریم)
+const SPEED = 4; // سرعت حرکت مار (پیکسل در هر فریم)
 const TURN_CHANCE = 0.08; // احتمال تغییر زاویه در هر فریم
 const TURN_ANGLE = Math.PI / 16; // حداکثر زاویه تغییر در هر فریم
 
