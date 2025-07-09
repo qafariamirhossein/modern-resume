@@ -1,27 +1,5 @@
 [
   {
-    "id": "project1",
-    "titleKey": "portfolio.project1.title",
-    "shortDescKey": "portfolio.project1.short",
-    "longDescKey": "portfolio.project1.long",
-    "images": ["/img/p1-1.jpg", "/img/p1-2.jpg"],
-    "video": "/video/p1.mp4",
-    "tech": ["React", "Tailwind", "Node.js"],
-    "demo": "https://demo.com/project1",
-    "source": "https://github.com/yourrepo/project1"
-  },
-  {
-    "id": "project2",
-    "titleKey": "portfolio.project2.title",
-    "shortDescKey": "portfolio.project2.short",
-    "longDescKey": "portfolio.project2.long",
-    "images": ["/img/p2-1.jpg"],
-    "video": "",
-    "tech": ["Vue", "Vuetify", "Firebase"],
-    "demo": "https://demo.com/project2",
-    "source": "https://github.com/yourrepo/project2"
-  },
-  {
     "id": "twitter-data",
     "titleKey": "portfolio.twitterData.title",
     "shortDescKey": "portfolio.twitterData.short",
@@ -72,6 +50,21 @@
     ],
     "video": "",
     "tech": ["TypeScript", "Ethers.js", "MongoDB", "Alchemy", "Telegram Bot API"],
+    "demo": "",
+    "source": ""
+  },
+  {
+    "id": "marketing-ava",
+    "titleKey": "portfolio.marketingAva.title",
+    "shortDescKey": "portfolio.marketingAva.short",
+    "longDescKey": "portfolio.marketingAva.long",
+    "images": [
+      "/images/portfolio/marketing-ava-1.png",
+      "/images/portfolio/marketing-ava-2.png",
+      "/images/portfolio/marketing-ava-3.png"
+  ],
+    "video": "",
+    "tech": ["AI", "Twitter API", "Automation", "TypeScript", "ElizaOS", "OpenAI","Twitter Scrapper"],
     "demo": "",
     "source": ""
   }

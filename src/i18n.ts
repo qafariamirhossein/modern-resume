@@ -44,6 +44,11 @@ const resources = {
 • Achieved seamless, real-time tracking of user portfolio performance and token analytics.
 
 Stack: TypeScript · Ethers.js · MongoDB · Alchemy · Telegram Bot API · etc.`
+        },
+        marketingAva: {
+          title: 'MarketingAva - AI Agent for Twitter Marketing',
+          short: 'AI-powered agent for automating and optimizing Twitter marketing tasks.',
+          long: `MarketingAva is your dedicated AI agent for Twitter marketing. Its primary goal is to promote and market products while automating key engagement tasks such as:\n\n- Following: Expanding reach by connecting with relevant accounts.\n- Liking: Engaging with tweets related to your niche.\n- Replying: Fostering interaction through direct engagement.\n- Quoting Tweets: Enhancing visibility by sharing tweets with added commentary.\n\nBy leveraging MarketingAva, you can streamline your marketing efforts and maintain an active, engaging presence on Twitter. MarketingAva is an Eliza Agent AI designed to promote and market.`
         }
       },
       contact: 'Contact Me',
@@ -187,6 +192,11 @@ Stack: TypeScript · Ethers.js · MongoDB · Alchemy · Telegram Bot API · etc.
   - سطوح کاربری مختلف بر اساس سابقه تراکنش کاربران
 
 تکنولوژی‌ها: TypeScript · Ethers.js · MongoDB · Alchemy · Telegram Bot API و ...`
+        },
+        marketingAva: {
+          title: 'مارکتینگ‌آوا - ایجنت هوشمند بازاریابی توییتر',
+          short: 'ایجنت هوشمند برای خودکارسازی و بهینه‌سازی بازاریابی در توییتر.',
+          long: `مارکتینگ‌آوا ایجنت اختصاصی شما برای بازاریابی در توییتر است. هدف اصلی آن، ترویج و بازاریابی محصولات با خودکارسازی وظایف کلیدی تعامل مانند:\n\n- دنبال‌کردن: افزایش دسترسی با ارتباط با حساب‌های مرتبط.\n- لایک‌کردن: تعامل با توییت‌های مرتبط با حوزه شما.\n- پاسخ‌دادن: ایجاد تعامل مستقیم با کاربران.\n- کوت‌کردن توییت‌ها: افزایش دیده‌شدن با اشتراک‌گذاری توییت‌ها همراه با توضیح.\n\nبا استفاده از مارکتینگ‌آوا، می‌توانید تلاش‌های بازاریابی خود را بهینه و حضور فعالی در توییتر حفظ کنید. مارکتینگ‌آوا یک ایجنت هوشمند مبتنی بر الگوریتم Eliza برای ترویج و بازاریابی است.`
         }
       },
       contact: 'تماس با من',
