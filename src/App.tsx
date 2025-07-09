@@ -19,6 +19,7 @@ import PortfolioDetail from './assets/PortfolioDetail';
 import SeaBackground from './SeaBackground';
 import FishSwarm from './FishSwarm';
 import { GiCrab, GiPalmTree, GiBeachBall, GiTurtle, GiDolphin, GiJellyfish } from 'react-icons/gi';
+import Snake from './Snake';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Snake />
       <SeaBackground />
       <FishSwarm />
       {/* Marine/Island Creatures Floating Background */}
