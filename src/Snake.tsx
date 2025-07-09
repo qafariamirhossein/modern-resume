@@ -62,7 +62,7 @@ const Snake: React.FC = () => {
       }
       headRef.current = { x, y, angle };
       // به ابتدای queue اضافه کن
-      const prev = bodyRef.current[0] || { x, y, angle };
+    //   const prev = bodyRef.current[0] || { x, y, angle };
       bodyRef.current = [
         { x, y, angle },
         ...bodyRef.current.slice(0, SEGMENTS - 1),
