@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next';
 import './App.css'
 import Section from './assets/Section';
@@ -22,17 +22,24 @@ function App() {
 
   // Scroll progress bar logic
   const [scroll, setScroll] = useState(0);
-  // Add scroll event listener
-  useState(() => {
+  const ticking = useRef(false);
+
+  useEffect(() => {
     const onScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      setScroll(scrolled);
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          setScroll(scrolled);
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  });
+  }, []);
 
   return (
     <BrowserRouter>
@@ -43,16 +50,16 @@ function App() {
           element={
             <div className="min-h-screen relative text-gray-900 dark:text-gray-100 transition-colors">
               {/* Scroll Progress Bar */}
-              <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', zIndex: 50 }}>
+              <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100vw', zIndex: 50 }}>
                 <div style={{ height: 6, background: 'linear-gradient(90deg, #4f8cff, #a259ff, #f857a6)', width: `${scroll}%`, borderRadius: 4, transition: 'width 0.2s' }} />
-                <div style={{ position: 'absolute', right: 16, top: 0, color: '#333', fontWeight: 700, fontSize: 12, background: 'rgba(255,255,255,0.7)', borderRadius: 4, padding: '0 8px', height: 18, display: 'flex', alignItems: 'center' }}>{Math.round(scroll)}%</div>
+                <div style={{ position: 'absolute', left: 16, bottom: 6, color: '#333', fontWeight: 700, fontSize: 12, background: 'rgba(255,255,255,0.7)', borderRadius: 4, padding: '0 8px', height: 18, display: 'flex', alignItems: 'center' }}>{Math.round(scroll)}%</div>
               </div>
               {/* Animated Background */}
-              <div className="animated-bg">
+              {/* <div className="animated-bg">
                 <div className="animated-bg-gradient one"></div>
                 <div className="animated-bg-gradient two"></div>
                 <div className="animated-bg-gradient three"></div>
-              </div>
+              </div> */}
               <main className="w-full max-w-6xl mx-auto px-2 sm:px-4 md:px-8 relative z-10">
                 <Section id="about" title={t('about')} icon={<FaUser />}>
                   <AboutMe />
