@@ -51,13 +51,13 @@ function App() {
       <FishSwarm />
       {/* Marine/Island Creatures Floating Background */}
       <div style={{ position: 'fixed', zIndex: 5, pointerEvents: 'none', width: '100vw', height: '100vh', top: 0, left: 0 }}>
-        <span style={{ position: 'absolute', left: '5vw', top: '80vh', fontSize: 48, opacity: 0.85 }} className="sea-float"><GiCrab color="#e67e22" /></span>
-        <span style={{ position: 'absolute', left: '80vw', top: '85vh', fontSize: 56, opacity: 0.8 }} className="sea-float"><GiPalmTree color="#27ae60" /></span>
-        <span style={{ position: 'absolute', left: '15vw', top: '10vh', fontSize: 40, opacity: 0.7 }} className="sea-float"><GiJellyfish color="#6dd5fa" /></span>
-        <span style={{ position: 'absolute', left: '60vw', top: '20vh', fontSize: 44, opacity: 0.7 }} className="sea-float"><GiTurtle color="#16a085" /></span>
-        <span style={{ position: 'absolute', left: '40vw', top: '70vh', fontSize: 38, opacity: 0.7 }} className="sea-float"><GiJellyfish color="#f39c12" /></span>
-        <span style={{ position: 'absolute', left: '70vw', top: '30vh', fontSize: 50, opacity: 0.7 }} className="sea-float"><GiDolphin color="#2980b9" /></span>
-        <span style={{ position: 'absolute', left: '30vw', top: '90vh', fontSize: 42, opacity: 0.7 }} className="sea-float"><GiBeachBall color="#e84393" /></span>
+        <span style={{ position: 'absolute', left: '5vw', top: '80vh', fontSize: 48, opacity: 0.85 }} className="sea-float"><GiCrab color="#e67e22" style={{ filter: 'drop-shadow(0 2px 6px #e67e22aa)' }} /></span>
+        <span style={{ position: 'absolute', left: '80vw', top: '85vh', fontSize: 56, opacity: 0.8 }} className="sea-float"><GiPalmTree color="#27ae60" style={{ filter: 'drop-shadow(0 2px 6px #27ae60aa)' }} /></span>
+        <span style={{ position: 'absolute', left: '15vw', top: '10vh', fontSize: 40, opacity: 0.7 }} className="sea-float"><GiJellyfish color="#6dd5fa" style={{ filter: 'drop-shadow(0 2px 6px #6dd5fa99)' }} /></span>
+        <span style={{ position: 'absolute', left: '60vw', top: '20vh', fontSize: 44, opacity: 0.7 }} className="sea-float"><GiTurtle color="#16a085" style={{ filter: 'drop-shadow(0 2px 6px #16a08599)' }} /></span>
+        <span style={{ position: 'absolute', left: '40vw', top: '70vh', fontSize: 38, opacity: 0.7 }} className="sea-float"><GiJellyfish color="#f39c12" style={{ filter: 'drop-shadow(0 2px 6px #f39c1299)' }} /></span>
+        <span style={{ position: 'absolute', left: '70vw', top: '30vh', fontSize: 50, opacity: 0.7 }} className="sea-float"><GiDolphin color="#2980b9" style={{ filter: 'drop-shadow(0 2px 6px #2980b999)' }} /></span>
+        <span style={{ position: 'absolute', left: '30vw', top: '90vh', fontSize: 42, opacity: 0.7 }} className="sea-float"><GiBeachBall color="#e84393" style={{ filter: 'drop-shadow(0 2px 6px #e84393aa)' }} /></span>
       </div>
       <Header />
       <Routes>
@@ -77,16 +77,16 @@ function App() {
                 <div className="animated-bg-gradient three"></div>
               </div> */}
               <main className="w-full max-w-6xl mx-auto px-2 sm:px-4 md:px-8 relative z-10">
-                <Section id="about" title={t('about')} icon={<span className="sea-float"><GiPalmTree /></span>}>
+                <Section id="about" title={t('about')} icon={<span className="sea-float"><GiPalmTree color="#27ae60" style={{ filter: 'drop-shadow(0 2px 6px #27ae60aa)' }} /></span>}>
                   <AboutMe />
                 </Section>
-                <Section id="skills" title={t('skills')} icon={<span className="sea-float"><FaCode /></span>}>
+                <Section id="skills" title={t('skills')} icon={<span className="sea-float"><FaCode color="#4f8cff" style={{ filter: 'drop-shadow(0 2px 6px #4f8cff99)' }} /></span>}>
                   <Skills />
                 </Section>
-                <Section id="education" title={t('education')} icon={<span className="sea-float"><FaGraduationCap /></span>}>
+                <Section id="education" title={t('education')} icon={<span className="sea-float"><FaGraduationCap color="#a259ff" style={{ filter: 'drop-shadow(0 2px 6px #a259ff99)' }} /></span>}>
                   <Education />
                 </Section>
-                <Section id="portfolio" title={t('portfolio.label')} icon={<span className="sea-float"><FaProjectDiagram /></span>}>
+                <Section id="portfolio" title={t('portfolio.label')} icon={<span className="sea-float"><FaProjectDiagram color="#f857a6" style={{ filter: 'drop-shadow(0 2px 6px #f857a699)' }} /></span>}>
                   <Portfolio />
                 </Section>
                 {/* <Section id="testimonials" title={t('testimonials_section')} icon={<FaQuoteRight />}> */}
@@ -95,13 +95,13 @@ function App() {
                 {/* <Section id="awards" title={t('awards_section')} icon={<FaAward />}> */}
                 {/*   <Awards /> */}
                 {/* </Section> */}
-                <Section id="hobbies" title={t('hobbies_section')} icon={<span className="sea-float"><GiCrab /></span>}>
+                <Section id="hobbies" title={t('hobbies_section')} icon={<span className="sea-float"><GiCrab color="#e67e22" style={{ filter: 'drop-shadow(0 2px 6px #e67e22aa)' }} /></span>}>
                   <Hobbies />
                 </Section>
-                <Section id="timeline" title={t('timeline_section')} icon={<span className="sea-float"><GiJellyfish /></span>}>
+                <Section id="timeline" title={t('timeline_section')} icon={<span className="sea-float"><GiJellyfish color="#6dd5fa" style={{ filter: 'drop-shadow(0 2px 6px #6dd5fa99)' }} /></span>}>
                   <Timeline />
                 </Section>
-                <Section id="contact" title={t('contact')} icon={<span className="sea-float"><GiBeachBall /></span>}>
+                <Section id="contact" title={t('contact')} icon={<span className="sea-float"><GiBeachBall color="#e84393" style={{ filter: 'drop-shadow(0 2px 6px #e84393aa)' }} /></span>}>
                   <ContactMe />
                 </Section>
               </main>
