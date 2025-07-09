@@ -15,6 +15,8 @@ import Timeline from './assets/Timeline';
 import Header from './assets/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PortfolioDetail from './assets/PortfolioDetail';
+import SeaBackground from './SeaBackground';
+import FishSwarm from './FishSwarm';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -43,6 +45,8 @@ function App() {
 
   return (
     <BrowserRouter>
+      <SeaBackground />
+      <FishSwarm />
       <Header />
       <Routes>
         <Route
@@ -61,31 +65,31 @@ function App() {
                 <div className="animated-bg-gradient three"></div>
               </div> */}
               <main className="w-full max-w-6xl mx-auto px-2 sm:px-4 md:px-8 relative z-10">
-                <Section id="about" title={t('about')} icon={<FaUser />}>
+                <Section id="about" title={t('about')} icon={<span className="sea-float"><FaUser /></span>}>
                   <AboutMe />
                 </Section>
-                <Section id="skills" title={t('skills')} icon={<FaCode />}>
+                <Section id="skills" title={t('skills')} icon={<span className="sea-float"><FaCode /></span>}>
                   <Skills />
                 </Section>
-                <Section id="education" title={t('education')} icon={<FaGraduationCap />}>
+                <Section id="education" title={t('education')} icon={<span className="sea-float"><FaGraduationCap /></span>}>
                   <Education />
                 </Section>
-                <Section id="portfolio" title={t('portfolio.label')} icon={<FaProjectDiagram />}>
+                <Section id="portfolio" title={t('portfolio.label')} icon={<span className="sea-float"><FaProjectDiagram /></span>}>
                   <Portfolio />
                 </Section>
-                {/* <Section id="testimonials" title={t('testimonials_section')} icon={<FaQuoteRight />}>
-                  <Testimonials />
-                </Section> */}
-                {/* <Section id="awards" title={t('awards_section')} icon={<FaAward />}>
-                  <Awards />
-                </Section> */}
-                <Section id="hobbies" title={t('hobbies_section')} icon={<FaHeart />}>
+                {/* <Section id="testimonials" title={t('testimonials_section')} icon={<FaQuoteRight />}> */}
+                {/*   <Testimonials /> */}
+                {/* </Section> */}
+                {/* <Section id="awards" title={t('awards_section')} icon={<FaAward />}> */}
+                {/*   <Awards /> */}
+                {/* </Section> */}
+                <Section id="hobbies" title={t('hobbies_section')} icon={<span className="sea-float"><FaHeart /></span>}>
                   <Hobbies />
                 </Section>
-                <Section id="timeline" title={t('timeline_section')} icon={<FaStream />}>
+                <Section id="timeline" title={t('timeline_section')} icon={<span className="sea-float"><FaStream /></span>}>
                   <Timeline />
                 </Section>
-                <Section id="contact" title={t('contact')} icon={<FaEnvelope />}>
+                <Section id="contact" title={t('contact')} icon={<span className="sea-float"><FaEnvelope /></span>}>
                   <ContactMe />
                 </Section>
               </main>
@@ -114,6 +118,15 @@ function App() {
                 @keyframes gradientMove {
                   0% { background-position: 0% 50%; }
                   100% { background-position: 100% 50%; }
+                }
+                .sea-float {
+                  display: inline-block;
+                  animation: seaFloat 3.5s ease-in-out infinite alternate;
+                }
+                @keyframes seaFloat {
+                  0% { transform: translateY(0) scale(1); }
+                  50% { transform: translateY(-8px) scale(1.05); }
+                  100% { transform: translateY(0) scale(1); }
                 }
               `}</style>
             </div>
