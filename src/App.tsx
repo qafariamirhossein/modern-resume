@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next';
 import './App.css'
 import Section from './assets/Section';
-import { FaUser, FaCode, FaGraduationCap, FaProjectDiagram, FaHeart, FaStream, FaEnvelope } from 'react-icons/fa';
+// import { FaUser, FaCode, FaGraduationCap, FaProjectDiagram, FaHeart, FaStream, FaEnvelope } from 'react-icons/fa';
+import {  FaCode, FaGraduationCap, FaProjectDiagram } from 'react-icons/fa';
 import AboutMe from './assets/AboutMe';
 import Skills from './assets/Skills';
 import Education from './assets/Education';
@@ -17,6 +18,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PortfolioDetail from './assets/PortfolioDetail';
 import SeaBackground from './SeaBackground';
 import FishSwarm from './FishSwarm';
+import { GiCrab, GiPalmTree, GiBeachBall, GiTurtle, GiDolphin, GiJellyfish } from 'react-icons/gi';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -47,6 +49,16 @@ function App() {
     <BrowserRouter>
       <SeaBackground />
       <FishSwarm />
+      {/* Marine/Island Creatures Floating Background */}
+      <div style={{ position: 'fixed', zIndex: 5, pointerEvents: 'none', width: '100vw', height: '100vh', top: 0, left: 0 }}>
+        <span style={{ position: 'absolute', left: '5vw', top: '80vh', fontSize: 48, opacity: 0.85 }} className="sea-float"><GiCrab color="#e67e22" /></span>
+        <span style={{ position: 'absolute', left: '80vw', top: '85vh', fontSize: 56, opacity: 0.8 }} className="sea-float"><GiPalmTree color="#27ae60" /></span>
+        <span style={{ position: 'absolute', left: '15vw', top: '10vh', fontSize: 40, opacity: 0.7 }} className="sea-float"><GiJellyfish color="#6dd5fa" /></span>
+        <span style={{ position: 'absolute', left: '60vw', top: '20vh', fontSize: 44, opacity: 0.7 }} className="sea-float"><GiTurtle color="#16a085" /></span>
+        <span style={{ position: 'absolute', left: '40vw', top: '70vh', fontSize: 38, opacity: 0.7 }} className="sea-float"><GiJellyfish color="#f39c12" /></span>
+        <span style={{ position: 'absolute', left: '70vw', top: '30vh', fontSize: 50, opacity: 0.7 }} className="sea-float"><GiDolphin color="#2980b9" /></span>
+        <span style={{ position: 'absolute', left: '30vw', top: '90vh', fontSize: 42, opacity: 0.7 }} className="sea-float"><GiBeachBall color="#e84393" /></span>
+      </div>
       <Header />
       <Routes>
         <Route
@@ -65,7 +77,7 @@ function App() {
                 <div className="animated-bg-gradient three"></div>
               </div> */}
               <main className="w-full max-w-6xl mx-auto px-2 sm:px-4 md:px-8 relative z-10">
-                <Section id="about" title={t('about')} icon={<span className="sea-float"><FaUser /></span>}>
+                <Section id="about" title={t('about')} icon={<span className="sea-float"><GiPalmTree /></span>}>
                   <AboutMe />
                 </Section>
                 <Section id="skills" title={t('skills')} icon={<span className="sea-float"><FaCode /></span>}>
@@ -83,13 +95,13 @@ function App() {
                 {/* <Section id="awards" title={t('awards_section')} icon={<FaAward />}> */}
                 {/*   <Awards /> */}
                 {/* </Section> */}
-                <Section id="hobbies" title={t('hobbies_section')} icon={<span className="sea-float"><FaHeart /></span>}>
+                <Section id="hobbies" title={t('hobbies_section')} icon={<span className="sea-float"><GiCrab /></span>}>
                   <Hobbies />
                 </Section>
-                <Section id="timeline" title={t('timeline_section')} icon={<span className="sea-float"><FaStream /></span>}>
+                <Section id="timeline" title={t('timeline_section')} icon={<span className="sea-float"><GiJellyfish /></span>}>
                   <Timeline />
                 </Section>
-                <Section id="contact" title={t('contact')} icon={<span className="sea-float"><FaEnvelope /></span>}>
+                <Section id="contact" title={t('contact')} icon={<span className="sea-float"><GiBeachBall /></span>}>
                   <ContactMe />
                 </Section>
               </main>
