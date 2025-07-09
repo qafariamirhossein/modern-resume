@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const fishes = [
   { id: 1, top: '60%', left: '-10%', size: 40, duration: 18, delay: 0 },
