@@ -31,6 +31,19 @@ const resources = {
           title: 'AI NFT Generator',
           short: 'Modern platform for generating AI art and minting NFTs on Ethereum.',
           long: `A modern, user-friendly platform for generating AI artwork and minting it as NFTs on the Ethereum blockchain. Built with Next.js, Tailwind CSS, and Web3 technologies.\n\nFeatures:\n- AI Art Generation (DALL-E 3)\n- NFT Minting on Sepolia testnet\n- IPFS Storage for metadata\n- Web3 wallet integration (MetaMask, WalletConnect)\n- NFT Gallery & Collection\n- Dark/Light mode, responsive design, modern UI/UX\n\nRole: Fullstack Developer – Built the entire platform, smart contract, and UI/UX.\n\nStack: Next.js · TypeScript · Tailwind CSS · Ethereum · OpenAI · Pinata · Alchemy · RainbowKit\n\nLive Demo: https://ai-nft-generator.com/\nSource: https://github.com/yourusername/ai-nft-generator`
+        },
+        telegramTradingBot: {
+          title: 'Telegram-based Trading Bot',
+          short: 'A robust Telegram bot for automated crypto trading with advanced features and protections.',
+          long: `Designed and developed a robust Telegram-based trading bot tailored for cryptocurrency markets.
+
+• Implemented advanced trading features, including: Automated buy/sell operations triggered by predefined conditions. Take profit and stop loss mechanisms to manage risk and maximize returns. Auto-snipe functionality for detecting and executing trades on promising tokens instantly. Signal-based trading, allowing buy and sell operations based on real-time market signals.
+• Integrated comprehensive protections: Anti-MEV protection to minimize miner extractable value risks. Anti-rug features to avoid malicious token scams.
+• Enhanced transaction precision with configurable buy/sell slippage settings and options to: Purchase specific amounts in ETH or a target number of tokens.
+• Delivered an intuitive live pricing and PnL tracking system, ensuring transparency for users.
+• Achieved seamless, real-time tracking of user portfolio performance and token analytics.
+
+Stack: TypeScript · Ethers.js · MongoDB · Alchemy · Telegram Bot API · etc.`
         }
       },
       contact: 'Contact Me',
@@ -144,7 +157,36 @@ const resources = {
         aiNftGenerator: {
           title: 'تولیدکننده NFT هوش مصنوعی',
           short: 'پلتفرم مدرن برای تولید هنر هوش مصنوعی و مینت NFT روی اتریوم.',
-          long: `یک پلتفرم مدرن و کاربرپسند برای تولید آثار هنری با هوش مصنوعی و مینت آن‌ها به عنوان NFT روی بلاکچین اتریوم. ساخته شده با Next.js، Tailwind CSS و فناوری‌های Web3.\n\nویژگی‌ها:\n- تولید هنر با هوش مصنوعی (DALL-E 3)\n- مینت NFT روی شبکه Sepolia\n- ذخیره‌سازی متادیتا روی IPFS\n- اتصال کیف پول (MetaMask، WalletConnect)\n- گالری و مجموعه NFT\n- حالت تاریک/روشن، طراحی واکنش‌گرا و رابط کاربری مدرن\n\nنقش: توسعه‌دهنده فول‌استک – ساخت کل پلتفرم، قرارداد هوشمند و رابط کاربری.\n\nتکنولوژی‌ها: Next.js · TypeScript · Tailwind CSS · Ethereum · OpenAI · Pinata · Alchemy · RainbowKit\n\nدموی زنده: https://ai-nft-generator.com/\nسورس: https://github.com/yourusername/ai-nft-generator`
+          long: `یک پلتفرم مدرن و کاربرپسند برای تولید آثار هنری با هوش مصنوعی و مینت آن‌ها به عنوان NFT روی بلاکچین اتریوم. ساخته شده با Next.js، Tailwind CSS و فناوری‌های Web3.\n\nویژگی‌ها:\n- تولید هنر با هوش مصنوعی (DALL-E 3)\n- مینت NFT روی شبکه Sepolia\n- ذخیره‌سازی متادیتا روی IPFS\n- اتصال کیف پول (MetaMask، WalletConnect)\n- گالری و مجموعه NFT\n- حالت تاریک/روشن، طراحی واکنش‌گرا و رابط کاربری مدرن\n\nنقش: توسعه‌دهنده فول‌استک – ساخت کل پلتفرم، قرارداد هوشمنع و رابط کاربری.\n\nتکنولوژی‌ها: Next.js · TypeScript · Tailwind CSS · Ethereum · OpenAI · Pinata · Alchemy · RainbowKit\n\nدموی زنده: https://ai-nft-generator.com/\nسورس: https://github.com/yourusername/ai-nft-generator`
+        },
+        telegramTradingBot: {
+          title: 'ربات ترید مبتنی بر تلگرام',
+          short: 'ربات قدرتمند تلگرام برای معاملات خودکار رمزارز با امکانات پیشرفته و محافظت‌های کامل.',
+          long: `طراحی و توسعه ربات ترید قدرتمند مبتنی بر تلگرام، ویژه بازارهای رمزارز.
+
+• پیاده‌سازی امکانات پیشرفته معاملاتی:
+  - خرید و فروش خودکار بر اساس شرایط از پیش تعیین‌شده
+  - مکانیزم‌های تعیین سود (Take Profit) و توقف ضرر (Stop Loss) برای مدیریت ریسک و حداکثرسازی سود
+  - قابلیت Auto-snipe برای شناسایی و خرید سریع توکن‌های جدید و پرپتانسیل
+  - معاملات سیگنالی بر اساس سیگنال‌های لحظه‌ای بازار
+  - خرید و فروش چندگانه (Multi-buy, Multi-sell)
+  - هر کیف پول در یک گروه از گس همان گروه استفاده می‌کند، حتی اگر کاربر چند گروه انتخاب کند
+  - مقدار گس و مبلغ تراکنش به صورت تصادفی برای هر عملیات
+
+• محافظت‌های جامع:
+  - ضد MEV برای کاهش ریسک Miner Extractable Value
+  - ضد Rug برای جلوگیری از کلاهبرداری توکن‌ها
+
+• امکانات تکمیلی:
+  - تنظیم دقیق اسلیپیج خرید و فروش و امکان خرید مقدار مشخص به ETH یا تعداد توکن هدف
+  - سیستم نمایش زنده قیمت و سود/زیان (PnL) برای شفافیت کامل
+  - رهگیری لحظه‌ای عملکرد پرتفوی و آنالیز توکن‌ها
+  - معاملات خودکار بر اساس داده‌های زنجیره اتریوم
+  - مانیتورینگ تراکنش‌ها برای شناسایی فعالیت احتمالی فلش‌بات‌ها
+  - مدیریت درآمد و ارسال بخشی از سود به کیف پول مشخص
+  - سطوح کاربری مختلف بر اساس سابقه تراکنش کاربران
+
+تکنولوژی‌ها: TypeScript · Ethers.js · MongoDB · Alchemy · Telegram Bot API و ...`
         }
       },
       contact: 'تماس با من',

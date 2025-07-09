@@ -56,5 +56,23 @@
     ],
     "demo": "https://ai-nft-generator.com/",
     "source": "https://github.com/qafariamirhossein/ai-nft-generator"
+  },
+  {
+    "id": "telegram-trading-bot",
+    "titleKey": "portfolio.telegramTradingBot.title",
+    "shortDescKey": "portfolio.telegramTradingBot.short",
+    "longDescKey": "portfolio.telegramTradingBot.long",
+    "images": [
+      "/images/portfolio/buy-bot-1.png",
+      "/images/portfolio/buy-bot-2.png",
+      "/images/portfolio/buy-bot-3.png",
+      "/images/portfolio/buy-bot-4.png",
+      "/images/portfolio/buy-bot-5.png",
+      "/images/portfolio/buy-bot-6.png"
+    ],
+    "video": "",
+    "tech": ["TypeScript", "Ethers.js", "MongoDB", "Alchemy", "Telegram Bot API"],
+    "demo": "",
+    "source": ""
   }
 ] 
