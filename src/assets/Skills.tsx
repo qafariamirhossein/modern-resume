@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef, useState } from 'react';
+import { FaReact, FaServer, FaDatabase, FaTools, FaPuzzlePiece } from 'react-icons/fa';
 
 const ProgressBar = ({ value, trigger }: { value: number; trigger: boolean }) => {
   const [displayValue, setDisplayValue] = useState(0);
@@ -33,7 +34,7 @@ const ProgressBar = ({ value, trigger }: { value: number; trigger: boolean }) =>
 
 const Skills = () => {
   const { t } = useTranslation();
-  const skills = t('skills_list', { returnObjects: true }) as { name: string; level: number }[];
+  const skillsObj = t('skills_list', { returnObjects: true }) as Record<string, { name: string; level: number }[]>;
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -46,7 +47,7 @@ const Skills = () => {
           setVisible(false);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => {
@@ -54,15 +55,42 @@ const Skills = () => {
     };
   }, []);
 
+  // Category display names (try translation, fallback to key) and icons
+  const categoryLabels: Record<string, string> = {
+    frontend: t('skills_category_frontend', 'Frontend'),
+    backend: t('skills_category_backend', 'Backend'),
+    database: t('skills_category_database', 'Database'),
+    devops: t('skills_category_devops', 'DevOps'),
+    other: t('skills_category_other', 'Other'),
+  };
+
+  const categoryIcons: Record<string, React.ReactNode> = {
+    frontend: <FaReact color="#61dafb" style={{ filter: 'drop-shadow(0 2px 6px #61dafbaa)' }} className="text-2xl md:text-3xl mr-2" />,
+    backend: <FaServer color="#a259ff" style={{ filter: 'drop-shadow(0 2px 6px #a259ff99)' }} className="text-2xl md:text-3xl mr-2" />,
+    database: <FaDatabase color="#4f8cff" style={{ filter: 'drop-shadow(0 2px 6px #4f8cff99)' }} className="text-2xl md:text-3xl mr-2" />,
+    devops: <FaTools color="#27ae60" style={{ filter: 'drop-shadow(0 2px 6px #27ae60aa)' }} className="text-2xl md:text-3xl mr-2" />,
+    other: <FaPuzzlePiece color="#f857a6" style={{ filter: 'drop-shadow(0 2px 6px #f857a699)' }} className="text-2xl md:text-3xl mr-2" />,
+  };
+
   return (
-    <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {skills.map(skill => (
-        <div key={skill.name} className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow flex flex-col gap-2 animate-fade-in">
-          <div className="flex justify-between items-center">
-            <span className="font-semibold">{skill.name}</span>
-            <span className="text-xs opacity-60">{skill.level}%</span>
+    <div ref={ref} className="flex flex-col gap-8">
+      {Object.entries(skillsObj).map(([category, skills]) => (
+        <div key={category}>
+          <h3 className="text-lg font-bold mb-4 text-blue-700 dark:text-blue-300 flex items-center">
+            <span className="sea-float">{categoryIcons[category]}</span>
+            {categoryLabels[category] || category}
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {skills.map(skill => (
+              <div key={skill.name} className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow flex flex-col gap-2 animate-fade-in">
+                <div className="flex justify-between items-center">
+                  <span className="font-semibold">{skill.name}</span>
+                  <span className="text-xs opacity-60">{skill.level}%</span>
+                </div>
+                <ProgressBar value={skill.level} trigger={visible} />
+              </div>
+            ))}
           </div>
-          <ProgressBar value={skill.level} trigger={visible} />
         </div>
       ))}
     </div>
