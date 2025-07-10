@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef, useState } from 'react';
 import { FaReact, FaServer, FaDatabase, FaTools, FaPuzzlePiece } from 'react-icons/fa';
+import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
 
 const ProgressBar = ({ value, trigger }: { value: number; trigger: boolean }) => {
   const [displayValue, setDisplayValue] = useState(0);
@@ -37,6 +38,7 @@ const Skills = () => {
   const skillsObj = t('skills_list', { returnObjects: true }) as Record<string, { name: string; level: number }[]>;
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [openCategories, setOpenCategories] = useState<string[]>([]);
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
@@ -74,25 +76,48 @@ const Skills = () => {
 
   return (
     <div ref={ref} className="flex flex-col gap-8">
-      {Object.entries(skillsObj).map(([category, skills]) => (
-        <div key={category}>
-          <h3 className="text-lg font-bold mb-4 text-blue-700 dark:text-blue-300 flex items-center">
-            <span className="sea-float">{categoryIcons[category]}</span>
-            {categoryLabels[category] || category}
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {skills.map(skill => (
-              <div key={skill.name} className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow flex flex-col gap-2 animate-fade-in">
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold">{skill.name}</span>
-                  <span className="text-xs opacity-60">{skill.level}%</span>
-                </div>
-                <ProgressBar value={skill.level} trigger={visible} />
+      {Object.entries(skillsObj).map(([category, skills]) => {
+        const isOpen = openCategories.includes(category);
+        const toggleCategory = () => {
+          setOpenCategories(prev =>
+            prev.includes(category)
+              ? prev.filter(c => c !== category)
+              : [...prev, category]
+          );
+        };
+        return (
+          <div key={category}>
+            <button
+              className="w-full text-left text-lg font-bold mb-4 text-blue-700 dark:text-blue-300 flex items-center focus:outline-none"
+              onClick={toggleCategory}
+              aria-expanded={isOpen}
+              aria-controls={`skills-panel-${category}`}
+            >
+              <span className="sea-float">{categoryIcons[category]}</span>
+              {categoryLabels[category] || category}
+              <span className="ml-2">
+                {isOpen ? <FaChevronDown /> : <FaChevronRight />}
+              </span>
+            </button>
+            {isOpen && (
+              <div
+                id={`skills-panel-${category}`}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-fade-in"
+              >
+                {skills.map(skill => (
+                  <div key={skill.name} className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow flex flex-col gap-2">
+                    <div className="flex justify-between items-center">
+                      <span className="font-semibold">{skill.name}</span>
+                      <span className="text-xs opacity-60">{skill.level}%</span>
+                    </div>
+                    <ProgressBar value={skill.level} trigger={visible} />
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
