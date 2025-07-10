@@ -88,7 +88,7 @@ const Skills = () => {
         return (
           <div key={category}>
             <button
-              className="w-full text-left text-lg font-bold mb-4 text-blue-700 dark:text-blue-300 flex items-center focus:outline-none"
+              className="w-full text-left text-lg font-bold mb-4 text-blue-700 dark:text-blue-300 flex items-center rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-300 bg-gray-100 dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 shadow-sm"
               onClick={toggleCategory}
               aria-expanded={isOpen}
               aria-controls={`skills-panel-${category}`}
@@ -96,7 +96,9 @@ const Skills = () => {
               <span className="sea-float">{categoryIcons[category]}</span>
               {categoryLabels[category] || category}
               <span className="ml-2">
-                {isOpen ? <FaChevronDown /> : <FaChevronRight />}
+                {isOpen
+                  ? <FaChevronDown className="text-blue-700 dark:text-blue-300" />
+                  : <FaChevronRight className="text-blue-700 dark:text-blue-300" />}
               </span>
             </button>
             {isOpen && (
