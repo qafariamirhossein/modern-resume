@@ -126,17 +126,22 @@ const Snake: React.FC = () => {
         opacity={0.85}
       />
       {/* راه‌راه کردن بدن مار با بیضی */}
-      {wavySegments.slice(1).map((seg, idx) => (
-        <ellipse
-          key={idx}
-          cx={seg.x}
-          cy={seg.y}
-          rx={12 - idx * 0.3}
-          ry={8 - idx * 0.2}
-          fill={getStripeColor(idx)}
-          opacity={0.7}
-        />
-      ))}
+      {wavySegments.slice(1).map((seg, idx) => {
+        const t = (idx + 1) / SEGMENTS; // نسبت موقعیت در بدن مار
+        const rx = 12 * (1 - 0.7 * t); // از 12 تا حدود 3.6
+        const ry = 8 * (1 - 0.7 * t);  // از 8 تا حدود 2.4
+        return (
+          <ellipse
+            key={idx}
+            cx={seg.x}
+            cy={seg.y}
+            rx={rx}
+            ry={ry}
+            fill={getStripeColor(idx)}
+            opacity={0.7}
+          />
+        );
+      })}
       {/* سر مار */}
       <g transform={`translate(${head.x},${head.y}) rotate(${headAngle})`}>
         <ellipse rx="18" ry="13" fill="#229954" stroke="#145a32" strokeWidth="3" />

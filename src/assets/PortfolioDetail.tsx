@@ -18,7 +18,7 @@ const PortfolioDetail = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mt-8 animate-fade-in">
+    <div className="max-w-7xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mt-8 animate-fade-in relative z-20">
       <Link to="/" className="text-blue-500 hover:underline">&larr; {t('portfolio.label')}</Link>
       <h1 className="text-3xl font-bold mt-4 mb-2">{t(item.titleKey)}</h1>
       <div className="mb-4 text-gray-600 dark:text-gray-300">{t(item.longDescKey)}</div>

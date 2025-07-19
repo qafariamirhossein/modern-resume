@@ -67,5 +67,29 @@
     "tech": ["AI", "Twitter API", "Automation", "TypeScript", "ElizaOS", "OpenAI","Twitter Scrapper"],
     "demo": "",
     "source": ""
+  },
+  {
+    "id": "devdiscuss",
+    "titleKey": "portfolio.devDiscuss.title",
+    "shortDescKey": "portfolio.devDiscuss.short",
+    "longDescKey": "portfolio.devDiscuss.long",
+    "images": [
+      "/images/portfolio/dev-discuss-1.jpg",
+      "/images/portfolio/dev-discuss-2.jpg",
+      "/images/portfolio/dev-discuss-3.jpg",
+      "/images/portfolio/dev-discuss-4.jpg",
+      "/images/portfolio/dev-discuss-5.jpg",
+      "/images/portfolio/dev-discuss-6.jpg",
+      "/images/portfolio/dev-discuss-7.jpg",
+      "/images/portfolio/dev-discuss-8.jpg",
+      "/images/portfolio/dev-discuss-9.jpg",
+      "/images/portfolio/dev-discuss-10.jpg"
+    ],
+    "video": "",
+    "tech": [
+      "Python", "Flask", "Jinja2", "PostgreSQL", "Telethon", "HTML", "CSS", "JavaScript"
+    ],
+    "demo": "",
+    "source": ""
   }
 ] 
